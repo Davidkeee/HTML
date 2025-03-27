@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Card Form</title>
+</head>
+<body>
+
+    <h3>First Name:</h3>
+    <input type="text" name="first_name"><br>
+
+    <h3>Last Name:</h3>
+    <input type="text" name="last_name"><br>
+
+    <h3>Email Address:</h3>
+    <input type="email" name="email" required><br>
+
+    <h3>Date of Birth:</h3>
+    <input type="date" name="dob"><br><br>
+
+    <fieldset>
+        <legend>Credit Card Type:</legend>
+        <input type="radio" name="card_type" value="visa"> <img src="Visa-Mastercard-1.jpg" alt="Visa" style="width: 50px; height: 25px;"><br>
+        <input type="radio" name="card_type" value="visa_debit"> <img src="visa.png" alt="Visa Debit"  style="width: 50px; height: 25px;"><br>
+        <input type="radio" name="card_type" value="mastercard"> <img src="mastercard.png" alt="MasterCard"  style="width: 50px; height: 25px;"><br>
+        <input type="radio" name="card_type" value="amex"> <img src="american express.png" alt="American Express"  style="width: 50px; height: 25px;"><br>
+    </fieldset>
+
+    <h3>Credit Card Number:</h3>
+    <input type="text" name="card_number"><br>
+
+    <h3>Expiry Year:</h3>
+    <select name="expiry_year">
+        <option>2019</option>
+        <option>2020</option>
+        <option>2021</option>
+        <option>2022</option>
+        <option>2023</option>
+    </select><br>
+
+    <h3>Expiry Month:</h3>
+    <select name="expiry_month">
+        <option>Select Month</option>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+    </select><br><br>
+
+    <h3>Additional Notes:</h3>
+    <textarea name="notes" rows="4" cols="40">Enter additional information here...</textarea><br><br>
+
+    <button type="submit">Submit Card Details</button>
+
+</body>
+</html>
