@@ -4,18 +4,18 @@
     <title>Credit Card Form</title>
 </head>
 <body>
-
+    <form id="contact-form">
     <h3>First Name:</h3>
-    <input type="text" name="first_name"><br>
+    <input type="text" id="first_name"><br>
 
     <h3>Last Name:</h3>
-    <input type="text" name="last_name"><br>
+    <input type="text" id="last_name"><br>
 
     <h3>Email Address:</h3>
-    <input type="email" name="email" required><br>
+    <input type="email" id="email" required><br>
 
     <h3>Date of Birth:</h3>
-    <input type="date" name="dob"><br><br>
+    <input type="date" id="dob"><br><br>
 
     <fieldset>
         <legend>Credit Card Type:</legend>
@@ -26,19 +26,23 @@
     </fieldset>
 
     <h3>Credit Card Number:</h3>
-    <input type="text" name="card_number"><br>
+    <input type="text" id="card_number"><br>
 
     <h3>Expiry Year:</h3>
-    <select name="expiry_year">
+    <select id="expiry_year">
         <option>2019</option>
         <option>2020</option>
         <option>2021</option>
         <option>2022</option>
         <option>2023</option>
+        <option>2024</option>
+        <option>2025</option>
+        <option>2026</option>
+        <option>2027</option>
     </select><br>
 
     <h3>Expiry Month:</h3>
-    <select name="expiry_month">
+    <select id="expiry_month">
         <option>Select Month</option>
         <option>January</option>
         <option>February</option>
@@ -55,9 +59,49 @@
     </select><br><br>
 
     <h3>Additional Notes:</h3>
-    <textarea name="notes" rows="4" cols="40">Enter additional information here...</textarea><br><br>
+    <textarea id="notes" rows="4" cols="40">Enter additional information here...</textarea><br><br>
 
     <button type="submit">Submit Card Details</button>
+    </form>
+
+<script>
+
+    let formID = document.getElementById("contact-form")
+    formID.addEventListener("submit", userData)
+    function userData(event){
+        event.preventDefault()
+        let userName = document.getElementById("first_name")
+        console.log(userName.value)
+        let lastName = document.getElementById("last_name")
+        console.log(lastName.value)
+        let emailName = document.getElementById("email")
+        console.log(emailName.value)
+        let dateName = document.getElementById("dob")
+        console.log(dateName.value)
+        let radio = document.querySelector('input[name="card_type"]:checked')
+        console.log(radio.value)
+        let cardnumber = document.getElementById("card_number")
+        console.log(cardnumber.value)
+        let EYear = document.getElementById("expiry_year")
+        console.log(EYear.value)
+        let EMonth = document.getElementById("expiry_month")
+        console.log(EMonth.value)
+        let Notes = document.getElementById("notes")
+        console.log(Notes.value)
+        
+        
+    }
+
+     
+
+
+</script>
 
 </body>
+     
+
+    
+
+             
+            
 </html>
